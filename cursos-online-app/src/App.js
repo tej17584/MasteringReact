@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  //Para declarar variables de estado
+  //const [nombre de la variable, Función que vas a cambiar] = valor Inicial
+  const [nombre, cambiarNombre] = useState("No tiene nombre");
+
+  //Creamos una función
+  function eventoCajaTexto(e) {
+    cambiarNombre(e.target.value); //le mandamos el nuevo valor
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>React Hooks y React STATE {nombre} </h1>
+      <input name="nombre" type="text" value={nombre} onChange={eventoCajaTexto} />
     </div>
   );
 }
