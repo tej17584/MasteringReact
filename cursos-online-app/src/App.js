@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Perfil from "./componentes/Perfil";
 
 function App() {
   //Para declarar variables de estado
@@ -13,7 +14,14 @@ function App() {
   return (
     <div>
       <h1>React Hooks y React STATE {nombre} </h1>
-      <input name="nombre" type="text" value={nombre} onChange={eventoCajaTexto} />
+      <input
+        name="nombre"
+        type="text"
+        value={nombre}
+        onChange={eventoCajaTexto}
+      />
+      {/**Le vamos a pasar un atributo a perfil */}
+      <Perfil atributoMio={nombre} />
     </div>
   );
 }
