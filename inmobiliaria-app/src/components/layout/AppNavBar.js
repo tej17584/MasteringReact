@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { AppBar, Toolbar } from "@material-ui/core";
+import { AppBar } from "@material-ui/core";
 import BarSession from "./bar/BarSession";
 
 export default class AppNavBar extends Component {
